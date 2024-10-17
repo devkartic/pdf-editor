@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "file-system": "^2.2.2",
-    "pdf-lib": "^1.17.1"
-  }
-}
