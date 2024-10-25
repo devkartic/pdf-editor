@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>PMV Demo</title>
+    <!-- Mozilla's PDF.js (pdf.js) must be loaded before PDF.js Mini Viewers (viewer.js) -->
+    <script src="js/pdf.js"></script>
+    <script src="js/pdf-viewer.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- The following styles are used for the demo page only. -->
+    <style>
+        .pdf-mini-viewer {
+            margin-bottom: 25px;
+        }
+        .pdf-mini-viewer.fullscreen-mode {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="intro">
+        <h1>PDF.js Mini Viewers Demo</h1>
+    </div>
+    <div data-pdf="pdfs/advancedpsy-form-2.pdf" data-options="no-print no-bookmark"></div>
+    <script>
+        /**
+         * Here is one example of initializing PDFMiniViewers. In a production
+         * application you would probably want to have your application call
+         * this at the appropriate time or place the initialization call in a
+         * document ready function.
+         *
+         * You must provide the relative (preferred) or absolute location to
+         * the PDF.js worker script (pdf-worker.js) and the CMAPS folder.
+         */
+        setTimeout( PDFMiniViewers.initialize.bind( null, 'js/pdf-worker.js', 'js/cmaps' ), 10 );
+
+    </script>
+</body>
+</html>
